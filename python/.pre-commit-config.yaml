@@ -1,5 +1,11 @@
 repos:
-  # Using this mirror lets us use mypyc-compiled black, which is about 2x faster
+  - repo: https://github.com/pycqa/isort
+    rev: 5.11.5
+    hooks:
+      - id: isort
+        name: isort (python)
+        args: ["--profile", "black", "--filter-files"] # for black compatibility
+
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 23.12.1
     hooks:
@@ -9,10 +15,3 @@ repos:
         # pre-commit's default_language_version, see
         # https://pre-commit.com/#top_level-default_language_version
         language_version: python3.10
-
-  - repo: https://github.com/pycqa/isort
-    rev: 5.11.5
-    hooks:
-      - id: isort
-        name: isort (python)
-        args: ["--profile", "black", "--filter-files"]
