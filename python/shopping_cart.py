@@ -29,6 +29,7 @@ class ShoppingCart:
             self._product_quantities[product] = quantity
 
     def handle_offers(self, receipt, offers, catalog):
+        """ "TODO: Move this logic to separate Offer classes"""
         for p in self._product_quantities.keys():
             quantity = self._product_quantities[p]
             if p in offers.keys():

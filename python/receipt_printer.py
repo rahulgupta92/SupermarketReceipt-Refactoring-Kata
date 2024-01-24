@@ -1,5 +1,7 @@
 from model_objects import ProductUnit
 
+""""TODO: Break this class into subclasses"""
+
 
 class ReceiptPrinter:
     def __init__(self, columns=40):
